@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Run RPA Operations Console</title>
+  <link rel="stylesheet" href="/static/css/styles.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">RPA</div>
+      <div>
+        <div class="brand-title">RPA Orchestrator</div>
+        <div class="brand-sub">Google Cloud Platform</div>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
+      <a class="nav-item active" data-view="dashboard">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+        <span>Visão Geral</span>
+      </a>
+      <a class="nav-item" data-view="datapools">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+        <span>Datapools</span>
+      </a>
+      <a class="nav-item" data-view="jobs">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <span>Automações</span>
+      </a>
+      <a class="nav-item" data-view="schedulers">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span>Agendamentos</span>
+      </a>
+      <a class="nav-item" data-view="logs">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        <span>Logs</span>
+      </a>
+      <a class="nav-item" data-view="audit">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        <span>Auditoria</span>
+      </a>
+    </nav>
+
+    <div class="user-profile">
+      <div class="user-avatar" id="userAvatar">OP</div>
+      <div class="user-info">
+        <div class="user-name" id="userEmail">developer@example.com</div>
+        <div class="user-role" id="userRole">Operador Autorizado</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <header class="top-bar">
+      <h1 class="page-title" id="pageTitle">Visão Geral & Métricas</h1>
+      <div class="top-actions">
+        <div class="status-indicator">
+          <div class="pulse-dot" id="pulseDot"></div>
+          <span id="pollStatusText">Ao Vivo (15s)</span>
+        </div>
+        <button class="btn" onclick="refreshData()">
+          <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+          <span>Atualizar</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="content-area" id="contentArea">
+      <!-- O conteúdo dinâmico é injetado via app.js -->
+    </section>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
